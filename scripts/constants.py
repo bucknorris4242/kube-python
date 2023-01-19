@@ -32,6 +32,7 @@ DEVELOPMENT_STATUS = "3 - Alpha"
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("Usage: python constant.py CONSTANT_NAME")
+        print("this is a sample")
         sys.exit(1)
 
     if sys.argv[1] in globals():
