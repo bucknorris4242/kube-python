@@ -30,6 +30,11 @@ def _websocket_request(websocket_request, force_kwargs, api_method, *args, **kwa
     except AttributeError:
         configuration = api_client.config
     prev_request = api_client.request
+
+    test = {}
+
+    test['foo'] = 'bar'
+    
     try:
         api_client.request = functools.partial(websocket_request, configuration)
         return api_method(*args, **kwargs)
